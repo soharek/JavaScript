@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Zegar</title>
+<script>
+
+function clock()
+{
+	var today = new Date();
+	
+	var day = today.getDate();
+	var month = today.getMonth();
+	var year = today.getFullYear();
+	
+	var minute = today.getMinutes();
+	if(minute<10){minute = "0"+minute};
+	
+	var hour = today.getHours();
+	if(hour<10){hour = "0"+hour};
+	
+	var seconds = today.getSeconds();
+	if(seconds<10){seconds = "0"+seconds};
+	
+	day +"."+month+"."+year+"." +" | " + hour + ":"+minute+":"+seconds
+	
+	document.getElementById("showclock").innerHTML = day +"."+month+"."+year+"." +" | " + hour + ":"+minute+":"+seconds;
+	
+	setTimeout("clock();",1000);
+}
+
+</script>	
+</head>
+<body onload ="clock();">
+
+<div id="showclock">
+	
+</div>
+</body>
+</html>
