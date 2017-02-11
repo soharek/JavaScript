@@ -1,0 +1,95 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>BubleSort</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        ul {
+            background: goldenrod;
+            padding: 10px;
+        }
+        
+        button {
+            background: green;
+            padding: 10px 5px;
+            min-width: 50px;
+            color: white;
+            border: 0;
+        }
+        
+        #messages {}
+        
+        li {
+            background: red;
+            padding: 8px 4px;
+            list-style: none;
+            margin-bottom: 10px;
+            text-weight: bold;
+            color: white;
+            -webkit-box-shadow: 7px 6px 0px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 7px 6px 0px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 7px 6px 0px 0px rgba(0, 0, 0, 0.75);
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var array = [10, 9, 1, 2, 7, 6, 12, 4, 5, 4];
+            
+            draw();
+
+            var button = document.querySelector("button");
+            console.log(button);
+            button.addEventListener('click', function () {
+                // kod sortujacy elementy array za pomoca bubble sort'a 
+                // jezeli jest posortowane juz nalezy wypisac odpowiedni komunikat
+                var isSorted = true;
+                for(var i =0;i<array.length;i++)
+                {   
+                   
+                    var temp = array[i];
+                    if(array[i]>array[i+1])
+                    {
+                        array[i]=array[i+1];
+                        array[i+1]=temp;
+                        isSorted = false;
+                    }
+
+                     
+
+                    console.log(isSorted);
+                }
+
+                if(isSorted===true){
+                         document.getElementById('messages').innerHTML ="It is sorted now";
+                     }
+               
+                draw();
+            });
+
+            function draw() {
+                //kod rysujacy wykres w html'u
+                var list = document.querySelector("ul"); 
+                list.innerHTML=null;
+
+                for(var i =0;i<array.length;i++)
+                {
+                    var newLi = document.createElement("li");
+                    newLi.style.width = array[i]*30+"px";
+                    newLi.innerHTML = array[i];
+
+                    //var list = document.querySelector("ul");
+                    list.appendChild(newLi);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="sort">Sort</button>
+    <p id="messages"></p>
+    <ul></ul>
+</body>
+
+</html>
