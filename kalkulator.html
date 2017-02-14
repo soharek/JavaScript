@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+        var digits = document.querySelectorAll(".cyfra");
+        var operators = document.querySelectorAll(".operation");
+        var display = document.querySelector(".display");
+        var clear = document.querySelector(".clear");
+        
+
+        addEvent(digits);
+        console.log(digits[1]);
+
+        console.log(digits);
+
+        function addEvent(digits){
+            for(var i =0;i<digits.length;i++){
+                addEventToDigit(digits[i])
+             }
+            
+        }
+
+        function addEventToDigit(digit){
+            digit.addEventListener("click",function(){
+                display.innerHTML += digit.innerHTML;
+                console.log("dziala");
+            })
+        }
+
+        clear.addEventListener("click",function(){
+            display.innerHTML = "&nbsp"
+        })
+
+        console.log(digits);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="calc">
+        <div class="display">wynik</div>
+        <div>
+            <table>
+                <tr>
+                    <td class="cyfra">9</td>
+                    <td class="cyfra">8</td>
+                    <td class="cyfra">7</td>
+                    <td class="operation">+</td>
+                </tr>
+                <tr>
+                    <td class="cyfra">6</td>
+                    <td class="cyfra">5</td>
+                    <td class="cyfra">4</td>
+                    <td class="operation">-</td>
+                </tr>
+                <tr>
+                    <td class="cyfra">3</td>
+                    <td class="cyfra">2</td>
+                    <td class="cyfra">1</td>
+                    <td class="operation">*</td>
+                </tr>
+                <tr>
+                    <td class="clear">c</td>
+                    <td class="cyfra">0</td>
+                    <td class="result">=</td>
+                    <td class="operation">/</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
