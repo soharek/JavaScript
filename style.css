@@ -1,15 +1,20 @@
 .calc
 {
     background-color: #eaedf2;
+	text-align: center;
 }
 
 td
-{
+{	
+	text-align: center;
     background-color: #f9fafc;
     width: 50px;
 }
 
 .display
-{
+{	
+	text-align: right;
     background-color: #bafcff;
+	width: 216px;
+
 }

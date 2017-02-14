@@ -10,19 +10,30 @@
         var operators = document.querySelectorAll(".operation");
         var display = document.querySelector(".display");
         var clear = document.querySelector(".clear");
-        
-
-        addEvent(digits);
+        var result = document.querySelector(".result");
+		
+		var a = 0;
+		var b = 0;
+		var operationSign = null;
+		
+        initDigits(digits);
+		initOperators(operators);
         console.log(digits[1]);
 
         console.log(digits);
 
-        function addEvent(digits){
+        function initDigits(digits){
             for(var i =0;i<digits.length;i++){
                 addEventToDigit(digits[i])
              }
             
         }
+		
+		function initOperators(operators){
+			for(var i=0;i<operators.length;i++){
+				addEventToOperator(operators[i])
+			}
+		}
 
         function addEventToDigit(digit){
             digit.addEventListener("click",function(){
@@ -30,11 +41,47 @@
                 console.log("dziala");
             })
         }
+		
+		function addEventToOperator(opertor){
+			opertor.addEventListener("click",function(){
+				a = display.innerHTML;
+				operationSign = opertor.innerHTML;
+				console.log(a);
+				console.log(operationSign);
+				display.innerHTML = "";
+
+			})
+		}
+		
+		function clearDisplay(){
+			display.innerHTML = "";
+			a = 0;
+			b = 0;
+			operation = null;
+		}
+		
+		
 
         clear.addEventListener("click",function(){
-            display.innerHTML = "&nbsp"
+            clearDisplay();
         })
-
+		
+		result.addEventListener("click", function(){
+			b = display.innerHTML;
+			display.innerHTML = doTheMath(operationSign);
+		})
+		
+		function doTheMath(operator){
+			switch(operator){
+				case "+": console.log(a,b); return parseFloat(a)+parseFloat(b);
+				case "-": console.log(a,b); return a-b;
+				case "*": console.log(a,b); return a*b;
+				case "/": console.log(a,b); return a/b;
+			
+			}
+		}
+		
+		
         console.log(digits);
         });
     </script>
