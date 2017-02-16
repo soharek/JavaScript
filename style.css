@@ -1,20 +1,40 @@
-.calc
+table
 {
     background-color: #eaedf2;
 	text-align: center;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 10px;
 }
 
 td
 {	
 	text-align: center;
     background-color: #f9fafc;
-    width: 50px;
+    width: 75px;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 10px;
+		
 }
 
-.display
+td:hover
+{
+	background-color: blue;
+	color: white;
+}
+
+#display
 {	
 	text-align: right;
-    background-color: #bafcff;
-	width: 216px;
+    background-color: lightgrey;
+	height: 50px;
+}
 
+.cyfra
+{
+	height: 50px;
+	
 }
