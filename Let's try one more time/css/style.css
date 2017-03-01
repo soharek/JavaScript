@@ -10,10 +10,11 @@ html,body{
     color: #555;
     text-rendering: optimizeLegibility;
     font-size: 20px;
+    background-color: #f9f9f9;
 }
 
 .row{
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -21,7 +22,7 @@ a{
     text-decoration: none;
 }
 
-img{
+.slider-foto{
     height: 100%;
     width: 100%;
 }
@@ -30,26 +31,13 @@ header{
     width:100%;
     height: 100vh;
 }
-
-/*.motto-box{
-    width: 80%;
-    position: absolute;
-    top: 66%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+section{
+    padding: 80px 0;
 }
 
-h1{
-    color: #fff;
-    text-transform: capitalize;
-    font-size: 300%;
-    letter-spacing: 2px;
-    font-weight: 100;
-}
 
-.btn{
-    display: block;
-}*/
+
+
 .motto-box{
     width: 80%;
     position: absolute;
@@ -58,7 +46,7 @@ h1{
     transform: translate(-50%,-50%);    
 }
 
-h1{
+h1,h2,h3{
     color: #fff;
     font-size: 300%;
     font-weight: 300;
@@ -66,6 +54,37 @@ h1{
     letter-spacing: 1px;
     margin-bottom: 20px;
     
+}
+
+h2{
+    color: #555;
+    font-size: 200%;
+    text-align: center;
+}
+
+h3{
+    color: #555;
+    font-size: 150%;
+    text-align: center;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #f1c40f;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.icon-big{
+    display: block;
+    font-size: 200%;
+    text-align: center;
+    color: #f1c40f;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .btn{
@@ -115,6 +134,9 @@ h1{
     font-size: 75px;
     
 }
+.arrow:hover{
+    color: #f1c40f;
+}
 
 .ion-ios-arrow-left{
     position: absolute;
@@ -150,5 +172,55 @@ h1{
 
 }
 
+/*SETION2 ABOUT BASKETBALL*/
 
 
+
+.features-box{
+    margin-top: 50px;
+}
+
+.features-box{
+    font-size: 18px;
+}
+
+/*section meet the team*/
+.meet-the-team{
+    padding: 0;
+}
+
+.palyers-box{
+    list-style: none;
+    width: 100%;
+}
+
+.palyers-box li {
+    display: block;
+    width: 20%;
+    float: left
+}
+
+.palyer-foto{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.palyer-foto img {
+    opacity: 0.7;
+    width: 100%;
+    height: 300px   ;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.palyer-foto img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
