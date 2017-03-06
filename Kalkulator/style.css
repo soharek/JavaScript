@@ -1,0 +1,54 @@
+.calculatorbody
+{
+    background-color: #eaedf2;
+	text-align: center;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+    border-spacing: 50px;
+	border-radius: 10px;
+    background-image: url(background.jpg);
+    margin: auto;
+    
+}
+
+td
+{	
+	text-align: center;
+    background-color: #f9fafc;
+    width: 120px;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 10px;
+    height: 80px;
+    font-family: myfont;
+    font-size: 60px;
+    
+		
+}
+
+
+.display
+{	
+	text-align: right;
+    background-color: lightgrey;
+	height: 100px;
+    margin-bottom: 20px;
+    font-size: 90px;
+    font-family: myfont;
+}
+
+@font-face
+{
+    font-family: myfont;
+    src: url(digital-7.ttf);
+}
+
+.cyfra
+{
+	height: 50px;
+	
+}
+
+
